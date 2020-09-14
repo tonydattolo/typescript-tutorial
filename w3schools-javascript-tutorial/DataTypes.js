@@ -26,24 +26,56 @@ var cars = ["mustang", "gto", "tesla p100d"]
 var person = { firstName: "James", lastName: "Bond", age: "50", eyeColor: "blue" }
 // inner objects are of type undefined
 
+// JS String methods
+// indexOf returns index where the first instance of the wanted substring begins
+// lastIndexOf returns the index where the last instance of the substring ends
+// both return -1 if not found
+// search() is used for regular expresisons
+// slice(begin, end-1)  can count in reverse too: slice(-12,-6)
+//  omitting second parameter slices until the end
+// substring(begin,end-1) doesn't take reverse vals like slice
+// substr(begin,lengthToSliceFor)
+// replace("content","wanted") *only replaces the first match, and is case sensitive
+//      to make case-insensitive use a regex /i insensitive flag:
+//          var n = str.replace(/MICROSOFT/i,"wanted")
+//      to replace all cases use regex /g global flag:
+//          var n  = str.replace(/Microsoft/g,"wanted")
+// *strings are immutable, all methods return a new string 
+// trim()
+
+// Extracting chars from strings:
+// charAt(position)
+// charCodeAt(position) returns UNICODE val of char
+
+// Converting string to an array
+// .split(delimeter)
+//      ex: txt.split(","), txt.split(" ")
+
+
+// Comparing objects will always be false
+var stringObj0 = new String("test0");
+var stringObj1 = new String("test0");
+console.log(stringObj1 === stringObj0); //false
+console.log(stringObj1 == stringObj0); //false
+
 // undefined type
 var sillyVar;
 
-console.log(person.lastName);
-console.log(person[0]);
-console.log(person[1]);
+// console.log(person.lastName);
+// console.log(person[0]);
+// console.log(person[1]);
 
 
-console.log(typeof person);
-console.log(typeof cars);
-console.log(typeof x1);
-console.log(typeof sillyVar);
+// console.log(typeof person);
+// console.log(typeof cars);
+// console.log(typeof x1);
+// console.log(typeof sillyVar);
 
 // Null
 // in JS, null is an object. You can empty an object by setting it to null.
 person = null; //typeof returns object still
 
-console.log(typeof person);
+// console.log(typeof person);
 
 // Null vs Undefined: equal in value, different in type
 
